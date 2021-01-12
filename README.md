@@ -41,7 +41,7 @@ To handle this issue, after rotating the image using built-in function, we will 
     // applie an affine transforation to image.
     warpAffine(src, dst, r, Size(boundW, boundH));
 ```
-In this case, we are combining a rotation with a translation. The affine transformation of the rotation has to be combined with the affine transformation of translation, from the center of the original image to the center of the destination image.
+In this case, we are combining a rotation with a translation. A transformation that can be expressed in the form of a matrix multiplication (linear transformation) followed by a vector addition (translation). The affine transformation of the rotation has to be combined with the affine transformation of translation, from the center of the original image to the center of the destination image.
 
 In this case, we will get the correct ouput.
 
